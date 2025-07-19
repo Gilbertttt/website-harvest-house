@@ -1,6 +1,4 @@
 // src/components/Footer.jsx
-import React from 'react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -26,7 +24,7 @@ const Footer = () => {
               {['Twitter', 'Instagram', 'LinkedIn'].map((social) => (
                 <a 
                   key={social}
-                  href="#" 
+                  href={social.url}
                   className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   {social.charAt(0)}
@@ -42,7 +40,7 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a 
-                      href="#" 
+                      href={link.url} 
                       className="text-gray-400 hover:text-white transition-colors"
                     >
                       {link}
@@ -59,9 +57,12 @@ const Footer = () => {
             &copy; {currentYear} Harvest House. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">Cookies</a>
+            <a  href="/privacy-policy"
+            className="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms-of-service"
+            className="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+            <a href="/cookie-policy"
+            className="text-gray-500 hover:text-white transition-colors">Cookies</a>
           </div>
         </div>
       </div>
