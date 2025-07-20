@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Imageplaceholder from "../../../assets/images/placeholderImage.svg"
 import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
 
 const Events = () => {
       const [forward, setForward] = useState()
@@ -112,9 +111,9 @@ const Events = () => {
           </div>
             
           </div>
-          <div className="flex gap-2 justify-end mt-8">
+          <div className="flex justify-end mt-8">
             <button
-             className="bg-gray-300 p-4 rounded-full"><FaArrowLeft /></button>
+             className="p-2 rounded-full">Slide Through</button>
             <button 
             onClick={() => setForward()}
             value={forward}

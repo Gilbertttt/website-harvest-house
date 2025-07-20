@@ -34,9 +34,10 @@ const Navbar = () => {
         </div>
         <ul className="hidden md:visible md:flex md:gap-8 cursor-pointer">
           {navLinks.map((item) => (
-            <div className="">
-              <li className="hover:text-[#199A58]" key={item.key}>
-                <a href={item.key}>{item.name}</a>
+            <div key={item.href}
+            className="">
+              <li className="hover:text-[#199A58]" >
+                <a href={item.href}>{item.name}</a>
               </li>
             </div>
           ))}
@@ -44,14 +45,14 @@ const Navbar = () => {
         <div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="visible md:hidden hover:text-[#199A58] p-2 cursor-pointer"
+            className=" md:hidden hover:text-[#199A58] p-2 cursor-pointer"
           >
             <GiHamburgerMenu />
           </button>
         </div>
 
         <div>
-          <button className="bg-[#199A58] py-2 px-4 rounded-full text-white  hidden md:visible">
+          <button className="bg-[#199A58] py-2 px-4 rounded-full text-white   hidden md:inline-block">
             Sign Up
           </button>
         </div>
@@ -66,9 +67,10 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col">
                 {navLinks.map((item) => (
-                  <div className="">
-              <li className="hover:bg-[#199A58] rounded-lg transition duration-100 ease-in-out hover:text-white cursor-pointer p-3" key={item.key}>
-                <a href={item.key}>{item.name}</a>
+                  <div key={item.key} 
+                  className="">
+              <li className="hover:bg-[#199A58] rounded-lg transition duration-100 ease-in-out hover:text-white cursor-pointer p-3">
+                <a href={item.href}>{item.name}</a>
               </li>
             </div>
                 ))}
